@@ -1,0 +1,55 @@
+<div class="mital-careers">	
+	<div class="mital-careers-form">
+		<form id="career-form" name="career" action="<?= $this->getUrl("careers/index/save"); ?>" method="POST" enctype="multipart/form-data" autocomplete="off" data-mage-init='{"validation": {}}'>
+			<fieldset class="fieldset">
+				<div class="field required">
+					<label for="your_name" class="label"> <?= __('Your Name') ?></label>
+					<div class="control">
+						<input type="text" name="your_name" class="control required-entry" id="your_name">
+					</div>
+				</div>
+				<div class="field required">
+					<label for="email_address" class="label"><?= __('Email address') ?></label>
+					<div class="control">
+						<input type="email" name="email_address" class="required-entry" id="email_address">
+					</div>
+				</div>
+				<div class="field required">
+					<label for="your_telephone" class="label"> <?= __('Your telephone') ?></label>
+					<div class="control">
+						<input type="text" name="your_telephone" class="control required-entry" id="your_telephone">
+					</div>
+				</div>
+				<div class="field">
+					<label for="your_message" class="label"> <?= __('Your Message') ?></label>
+					<div class="control">
+						<textarea name="your_message" class="control" id="your_message"></textarea>
+					</div>
+				</div>
+				<div class="field">
+					<label for="myfile"> <?= __('Attach Your CV (.doc,docx,.pdf,.odt)') ?></label>
+					<div class="control">
+						<input type="file" id="myfile" name="myfile">
+					</div>
+				</div>				
+			</fieldset>
+			<div class="actions-toolbar">
+		        <div class="primary">
+		            <button type="submit" class="action submit primary" title="<?php  echo __('Send') ?>"><span><?php echo __('Send') ?></span></button>
+		        </div>
+		    </div>
+		</form>		
+	</div>
+</div>
+
+<script type="text/javascript">
+require([
+    'jquery',
+    'mage/mage'
+], function($){
+ 
+   var dataForm = $('#career-form');
+   dataForm.mage('validation', {});
+ 
+});
+</script>
