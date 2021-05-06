@@ -25,3 +25,4 @@ The module for submit form like contact us or career form and have option to att
 
 ## Attached files will place under magento/pub/media/Mital/Careers
 
+## You can access this form by yourstore.com/careers
